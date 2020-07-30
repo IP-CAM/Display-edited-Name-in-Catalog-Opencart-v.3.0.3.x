@@ -43,18 +43,6 @@
         </operation>
     </file>
     <!--  -->
-    <!-- Добавляет в регулярные профили -->
-    <file path="admin/controller/catalog/recurring.php">
-        <operation>
-            <search trim="true"><![CDATA[$data['recurring_description'] = $this->model_catalog_recurring->getRecurringDescription($recurring_info['recurring_id']);]]></search>
-            <add position="after" trim="true"><![CDATA[
-                //ocn__name_edited_element_in_catalog
-                $data['text_form'] .= sprintf(': %s', $data['recurring_description'][$this->config->get('config_language_id')]['name']);
-                //ocn__name_edited_element_in_catalog
-            ]]></add>
-        </operation>
-    </file>
-    <!--  -->
     <!-- Добавляет в фильтры -->
     <file path="admin/controller/catalog/filter.php">
         <operation>
